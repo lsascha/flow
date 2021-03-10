@@ -382,7 +382,7 @@ final class UriConstraints
         // In case the base URL contains a path segment, prepend this to the URL (to generate proper host-absolute URLs)
         $baseUriPath = trim($baseUri->getPath(), '/');
         if ($baseUriPath !== '') {
-            $mergedUriPath = $baseUriPath;
+            $mergedUriPath = '';
             if ($uri->getPath() !== '') {
                 $mergedUriPath .= '/' . ltrim($uri->getPath(), '/');
             }
